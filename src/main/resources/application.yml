@@ -4,9 +4,9 @@ server:
   #Setting logging levels
 logging:
     level:
-      com.netflix: WARN
+      com.netflix: DEBUG
       org.springframework.web: WARN
-      com.gif.microservicios: DEBUG
+      com.gfi.microservicios: DEBUG
 
 eureka:
   instance:
@@ -24,3 +24,8 @@ zuul:
     microservicio-dummy: /dummy/**
   sensitiveHeaders: Cookie, Set-Cookie
     
+    
+ #Distributed tracing
+spring:
+   zipkin:
+      baseUrl: http://localhost:9411
