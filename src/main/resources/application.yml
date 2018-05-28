@@ -6,7 +6,7 @@ logging:
     level:
       com.netflix: WARN
       org.springframework.web: WARN
-      com.thoughtmechanix: DEBUG
+      com.gif.microservicios: DEBUG
 
 eureka:
   instance:
@@ -22,3 +22,5 @@ zuul:
   routes:
     microservicio-base: /servicio/**
     microservicio-dummy: /dummy/**
+  sensitiveHeaders: Cookie, Set-Cookie
+    
